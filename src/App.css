@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+/* css styles for list*/
+ul {
+  list-style-type: none;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
