@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import usePaginatedData from '../hooks/usePaginatedData';
+import { Todo } from "../interface/todo";
 
 const PaginatedComp = () => {
-  const url = 'https://jsonplaceholder.typicode.com/posts';
+  const url: string = 'https://jsonplaceholder.typicode.com/posts';
   // custom hook which will handle data fetching, error, loading for this component
   const {
     data,
@@ -21,7 +22,7 @@ const PaginatedComp = () => {
       {error && <p>{error}</p>}
       {!loading && !error && (
         <ul>
-          {data.map((item) => (
+          {data.map((item: Todo) => (
             <li key={item.id}>
               {item.id}. {item.title}
             </li>
